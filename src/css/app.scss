@@ -1,1 +1,60 @@
-// app global css in SCSS form
+.container {
+  position: relative;
+  width: 500px;
+  height: auto;
+  background-color:  rgba(0 0 0 / 0.19);
+  border-radius: 14px;
+  left: 33%;
+  top: 100px;
+  padding: 50px;
+}
+.avatars {
+  display: flex;
+  justify-content: space-between;
+}
+.avatars button{
+  border-radius: 50%;
+  border: none;
+  width: auto;
+  height: auto;
+}
+#Avatar1, #Avatar2, #Avatar3, #Avatar4{
+  width: 70px;
+  height: auto;
+}
+.btn_go {
+  position: relative;
+  left: 10%;
+  margin-top: 20px;
+  width: 80%;
+}
+.text_login {
+  font-size: 20px;
+  position: relative;
+  left: 10%;
+}
+.text_login button {
+  background-color: rgb( 0 0 0/ 0.19);
+  border: none;
+  border-radius: 50%;
+}
+.main {
+  background-image: url(../././../public/images/nody-دانلود-تصویر-زمینه-برای-کامپیوتر-با-کیفیت-full-hd-1628751030.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.avatar_s {
+  text-align: center;
+  margin-left: 40%;
+}
+.avatar_s {
+  width: auto;
+  height: auto;
+}
+#game {
+  width: 70px;
+  height: auto;
+}
+// ################################################
+
+//
