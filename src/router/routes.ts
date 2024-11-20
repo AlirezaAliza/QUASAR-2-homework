@@ -27,11 +27,32 @@ const routes: RouteRecordRaw[] = [
   },
   {
     path: '/Dashboard',
-    component: () => import('layouts/Dashbourd/dashbourdLayout.vue'),
+    component: () => import('layouts/Dashboard/DashboardLayout.vue'),
     children: [
       {
+        path: 'search',
+        name: 'search',
+        component: () => import('pages/Dashboard/SearchPage.vue')
+      },
+      {
         path: 'index',
+        name: 'index',
         component: () => import('pages/Dashboard/DashboardPage.vue')
+      },
+      {
+        path: 'myPost',
+        name: 'myPost',
+        component: () => import('pages/Dashboard/MyPostPage.vue')
+      },
+      {
+        path: 'allPost',
+        name: 'allPost',
+        component: () => import('pages/Dashboard/AllPostPage.vue')
+      },
+      {
+        path: 'allUser',
+        name: 'allUser',
+        component: () => import('pages/Dashboard/AllUserPage.vue')
       }
     ],
   },

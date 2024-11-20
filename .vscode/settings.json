@@ -12,6 +12,7 @@
     "typescript",
     "vue"
   ],
+  "liveServer.settings.CustomBrowser": "msedge",
   "typescript.tsdk": "node_modules/typescript/lib",
   "workbench.colorCustomizations": {
     "activityBar.activeBackground": "#65c89b",

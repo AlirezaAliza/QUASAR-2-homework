@@ -1,7 +1,6 @@
 <template>
-  <q-Page>
-    <h1>
-      This Page is Dashboard
-    </h1>
-  </q-Page>
+  <q-page>
+    <h1>hello every body</h1>
+  </q-page>
 </template>
+<!--  -->
