@@ -12,15 +12,10 @@ const routes: RouteRecordRaw[] = [
         path: 'LoginPage',
         name: 'loginPage',
         component: () => import('pages/auth/LoginPage.vue')
-      }
-    ],
-  },
-  {
-    path: '/',
-    component: () => import('layouts/auth/authLayout.vue'),
-    children: [
+      },
       {
         path: 'registerPage',
+        name: 'registerPage'
         component: () => import('pages/auth/RegisterPage.vue')
       }
     ],
@@ -37,7 +32,7 @@ const routes: RouteRecordRaw[] = [
       {
         path: 'index',
         name: 'index',
-        component: () => import('pages/Dashboard/DashboardPage.vue')
+        component: () => import('pages/Dashboard/IndexPage.vue')
       },
       {
         path: 'myPost',
