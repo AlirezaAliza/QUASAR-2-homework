@@ -2,6 +2,7 @@ import { RouteCallback } from '@quasar/app-vite';
 import { route } from 'quasar/wrappers';
 import { RouteRecordRaw, RouteRecordRedirectOption } from 'vue-router';
 
+
 const routes: RouteRecordRaw[] = [
   {
     path: '/',

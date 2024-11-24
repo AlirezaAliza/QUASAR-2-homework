@@ -2,14 +2,21 @@
   <div class="background">
     <div class="page">
       <label>Username</label>
-      <q-input v-model="Username" label="Username"/>
+      <q-input v-model="Username" label="Username" />
       <label>Password</label>
-      <q-input v-model="Password" label="Password"/>
-      <q-btn outline rounded color="primary" @click="goToAnotherPage" label="Sing in" /><br><br>
-      <q-btn outline rounded color="primary" @click="goToAnotherPage" label="You don't have an account" />
+      <q-input v-model="Password" label="Password" />
+      <q-btn outline rounded color="primary" label="Sign in" /><br /><br />
+      <q-btn
+        outline
+        rounded
+        color="primary"
+        label="You don't have an account"
+        :to="{ path: '/registerPage' }"
+      />
     </div>
   </div>
 </template>
+
 <style>
   * {
     color: white;
@@ -22,8 +29,7 @@
     height: 698px;
   }
   .page {
-    background-color: rgba(0 0 0 / 0.8);
-    /* background-color: red; */
+    background-color: rgba(0, 0, 0, 0.8);
     position: relative;
     left: 34%;
     top: 20%;
@@ -36,6 +42,12 @@
 </style>
 
 <script>
-
+export default {
+  data() {
+    return {
+      Username: '',
+      Password: '',
+    };
+  },
+};
 </script>
-<!--  -->
