@@ -26,19 +26,23 @@
         </div>
         <q-avatar class="avatar_s"><img id="game" src="" /></q-avatar>
         <q-btn class="btn_go" push color="primary" label="Make Account" /><br />
-        <label class="text_login">You have an account and <button :to="{ path: '/loginPage' }" > Login </button>
+        <label class="text_login">You have an account and <button @click="login"> Login </button>
         </label>
       </div>
     </q-page>
   </div>
 </template>
 
-<script>
-export default {
-  methods: {
-    logMessage(srrc) {
-      document.getElementById('game').src = srrc;
-    },
-  },
+<script setup>
+import { useRouter } from 'vue-router';
+
+function logMessage(srrc) {
+  document.getElementById('game').src = srrc;
 };
+
+const router = useRouter();
+const login = () => {
+  router.replace({ name: 'loginPage' })
+}
+
 </script>
