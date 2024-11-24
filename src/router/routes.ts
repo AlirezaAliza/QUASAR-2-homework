@@ -11,20 +11,25 @@ const routes: RouteRecordRaw[] = [
       {
         path: 'LoginPage',
         name: 'loginPage',
-        component: () => import('pages/auth/LoginPage.vue')
-      }
-    ],
-  },
-  {
-    path: '/',
-    component: () => import('layouts/auth/authLayout.vue'),
-    children: [
+        component: () => import('/src/pages/auth/LoginPage.vue')
+      },
       {
         path: 'registerPage',
+        name:'registerPage',
         component: () => import('pages/auth/RegisterPage.vue')
       }
     ],
   },
+  // {
+  //   path: '/',
+  //   component: () => import('layouts/auth/authLayout.vue'),
+  //   children: [
+  //     {
+  //       path: 'registerPage',
+  //       component: () => import('pages/auth/RegisterPage.vue')
+  //     }
+  //   ],
+  // },
   {
     path: '/dashboard',
     component: () => import('layouts/Dashboard/DashboardLayout.vue'),

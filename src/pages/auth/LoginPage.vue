@@ -2,11 +2,11 @@
   <div class="background">
     <div class="page">
       <label>Username</label>
-      <q-input/>
+      <q-input v-model="Username" label="Username"/>
       <label>Password</label>
-      <q-input/>
-      <q-btn outline rounded color="primary" label="Sing in" /><br><br>
-      <q-btn outline rounded color="primary" label="You don't have an account" />
+      <q-input v-model="Password" label="Password"/>
+      <q-btn outline rounded color="primary" @click="goToAnotherPage" label="Sing in" /><br><br>
+      <q-btn outline rounded color="primary" @click="goToAnotherPage" label="You don't have an account" />
     </div>
   </div>
 </template>
@@ -34,3 +34,8 @@
     text-align: center;
   }
 </style>
+
+<script>
+
+</script>
+<!--  -->

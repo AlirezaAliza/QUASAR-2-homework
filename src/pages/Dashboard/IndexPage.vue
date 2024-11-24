@@ -1,26 +1,17 @@
-<template>
-  <q-layout class="overflow-auto window-height">
-    <div class="q-pa-md q-md-xl row items-start justify-center q-gutter-sm">
-      <q-card
-      class="my-card"
-      v-for="(posts, index) in posts"
-      :key="index"
-      >
+<!-- <template>
+    <q-card
+      class="my-card text-white"
+      style="background: radial-gradient(circle, #35a2ff 0%, #014a88 100%)"
+    >
+      <q-card-section>
+        <div class="text-h6">Our Changing Planet</div>
+        <div class="text-subtitle2">by John Doe</div>
+      </q-card-section>
 
-      </q-card>
-    </div>
-  </q-layout>
-</template>         
+      <q-card-section class="q-pt-none">
+        {{ lorem }}
+      </q-card-section>
+    </q-card>
 
-<script lang="ts" setup>
-
-import { posts } from "/src/components/ts/IndexComponent.ts";
-
-  const like = (id:number) =>{
-    console.log(id);
-
-  }
-
-</script>
-
-<!--  -->
+</template>
+ -->
