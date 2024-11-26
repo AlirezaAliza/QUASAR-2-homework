@@ -10,21 +10,14 @@
         <label style="font-size: 20px; margin-left: 80px">
           please enter your avatar
         </label>
-        <div class="avatars">
-          <button class="game_1" @click="logMessage('/public/images/12.png')">
-            <q-avatar id="Avatar1"><img src="/public/images/12.png" /></q-avatar>
-          </button>
-          <button class="game_2" @click="logMessage('/public/images/18.png')">
-            <q-avatar id="Avatar2"><img src="/public/images/18.png" /></q-avatar>
-          </button>
-          <button class="game_3" @click="logMessage('/public/images/40.png')">
-            <q-avatar id="Avatar3"><img src="/public/images/40.png" /></q-avatar>
-          </button>
-          <button class="game_4" @click="logMessage('/public/images/22.png')">
-            <q-avatar id="Avatar4"><img src="/public/images/22.png" /></q-avatar>
-          </button>
-        </div>
-        <q-avatar class="avatar_s"><img id="game" src="" /></q-avatar>
+        <q-file filled bottom-slots v-model="model" label="Label" counter>
+          <template v-slot:prepend>
+            <q-icon name="cloud_upload" @click.stop.prevent />
+          </template>
+          <template v-slot:append>
+            <q-icon name="close" @click.stop.prevent="model = null" class="cursor-pointer" />
+          </template>
+        </q-file>
         <q-btn class="btn_go" push color="primary" label="Make Account" /><br />
         <label class="text_login">You have an account and <button @click="login"> Login </button>
         </label>
@@ -35,10 +28,6 @@
 
 <script setup>
 import { useRouter } from 'vue-router';
-
-function logMessage(srrc) {
-  document.getElementById('game').src = srrc;
-};
 
 const router = useRouter();
 const login = () => {
