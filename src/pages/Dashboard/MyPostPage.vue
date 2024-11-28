@@ -57,7 +57,7 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup>
 
 import { ref } from 'vue';
 import { columns, rows, pagination } from 'components/ts/MyPostComponent'

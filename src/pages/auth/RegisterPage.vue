@@ -2,11 +2,11 @@
   <div class="main">
     <q-page>
       <div class="container">
-        <q-input class="inputs" label="Username">
+        <q-input v-model="user.username" class="inputs" label="Username">
           <template v-slot:append> </template></q-input>
-        <q-input class="inputs" label="Email">
+        <q-input v-model="user.email" class="inputs" label="Email">
           <template v-slot:append> </template></q-input>
-        <q-input class="inputs" label="Password" type="password"><template v-slot:append></template></q-input>
+        <q-input v-model="user.password" class="inputs" label="Password" type="password"><template v-slot:append></template></q-input>
         <label style="font-size: 20px; margin-left: 80px">
           please enter your avatar
         </label>
@@ -27,7 +27,15 @@
 </template>
 
 <script setup>
+import { ref } from 'vue';
 import { useRouter } from 'vue-router';
+
+const user = ref({
+  username: '',
+  email: '',
+  password: '',
+  avatar: undefined,
+})
 
 const router = useRouter();
 const login = () => {
