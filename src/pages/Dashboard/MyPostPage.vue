@@ -20,6 +20,7 @@
         label="Create New Post"
         color="light-blue-8"
         class="q-ml-md"
+        @click="createPost()"
         />
       </template>
       <template v-slot:header="props">
@@ -55,14 +56,26 @@
       </template>
     </q-table>
   </div>
+  <user-create-post
+  :modal="createPostParameter.modal"
+  ></user-create-post>
 </template>
 
 <script setup>
 
 import { ref } from 'vue';
 import { columns, rows, pagination } from 'components/ts/MyPostComponent'
+import UserCreatePost from 'src/components/vue/UserCreatePost.vue';
 
 const filter =  ref('')
+
+const createPostParameter = ref({
+  model: false,
+});
+
+const createPost = () => {
+  createPostParameter.value.model = !createPostParameter.value.model
+};
 
 </script>
 
