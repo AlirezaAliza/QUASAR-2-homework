@@ -98,7 +98,7 @@
 
 <script>
 import { ref } from 'vue';
-import { accessMenu } from 'components/ts/menuComponent';
+import { accessMenu } from 'components/ts/MenuComponent';
 import { profileTemp } from 'components/ts/ProfileComponent';
 
 export default {

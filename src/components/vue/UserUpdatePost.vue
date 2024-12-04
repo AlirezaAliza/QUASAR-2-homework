@@ -2,12 +2,12 @@
   <q-dialog :model-value="props.modal" persistent>
     <q-card style="min-width: 350px">
       <q-card-section>
-        <div class="text-h6">Create New Post</div>
+        <div class="text-h6">Update Post</div>
       </q-card-section>
       <q-card-section class="q-pt-none">
         <q-input
           dense
-          v-model:model-value="createPostParameter.title"
+          v-model:model-value="updatePostParameter.title"
           label="Enter Your Title"
         />
       </q-card-section>
@@ -15,7 +15,7 @@
         <q-input
           type="textarea"
           dense
-          v-model:model-value="createPostParameter.description"
+          v-model:model-value="updatePostParameter.description"
           label="Enter Your Description"
         />
       </q-card-section>
@@ -23,7 +23,7 @@
         <q-file
           filled
           bottom-slots
-          v-model:model-value="createPostParameter.image"
+          v-model:model-value="updatePostParameter.image"
           label="Post Image"
           counter
         >
@@ -33,7 +33,7 @@
           <template v-slot:append>
             <q-icon
               name="close"
-              @click.stop.prevent="createPostParameter.image = null"
+              @click.stop.prevent="updatePostParameter.image = null"
               class="cursor-pointer"
             />
           </template>
@@ -54,18 +54,28 @@
 </template>
 
 <script setup>
-import { defineProps, defineEmits, ref } from 'vue';
+import { defineProps, defineEmits, ref, watch } from 'vue';
 
 const props = defineProps({
   modal: {
     default: false,
-  }
+  },
+  data: {}
 });
 
-const createPostParameter = ref({
+const updatePostParameter = ref({
+  id: 0,
   title: '',
   description: '',
   image: undefined,
+});
+
+watch(props, () => {
+  updatePostParameter.value = {
+    title: props.data.title,
+    description: props.data.description,
+    image: updatePostParameter.value.image,
+  };
 });
 
 const emit = defineEmits(['update:modal']);
@@ -76,9 +86,9 @@ const close = () => {
 
 const accepted = () => {
   console.log(
-    createPostParameter.value.title,
-    createPostParameter.value.description,
-    createPostParameter.value.image
+    updatePostParameter.value.title,
+    updatePostParameter.value.description,
+    updatePostParameter.value.image
   );
 
   emit.call(this, 'update:modal', false);
