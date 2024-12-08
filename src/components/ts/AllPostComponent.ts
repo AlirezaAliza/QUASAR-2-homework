@@ -1,26 +1,26 @@
 import { ref } from 'vue';
 
-const columns = [
+const columns: any[] = [
   { name: 'id', align: 'left', label: 'ID', field: 'id', sortable: true },
-  { name: 'username', align: 'center', label: 'Username', field: 'username', sortable: true },
+  { name: 'username', align: 'center', label: 'User Name', field: 'username', sortable: true,format: (val:any) => `${val.name}` },
   { name: 'title', align: 'center', label: 'Title', field: 'title', sortable: true },
-  { name: 'description', align: 'center', label: 'Description', field: 'description', sortable: true,format: (val:string) => `${val.slice(0,40)} ...`, },
+  { name: 'description', align: 'center', label: 'Description', field: 'description', sortable: true,format: (val:string) => `${val.slice(0,40)} ...` },
 ]
 
 const rows = ref([
   {
     id: 1,
-    username: 'alireza',
     image: 'images/mountains.jpg',
     title: 'fake',
-    description: 'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available'
+    description: 'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available',
+    username: {name:'hossein'}
   },
   {
     id: 2,
-    username: 'alireza',
     image: 'images/mountains.jpg',
     title: 'fake',
-    description: 'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available'
+    description: 'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available',
+    username: {name:'hossein'}
   },
 
 ]);

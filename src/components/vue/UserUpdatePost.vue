@@ -53,7 +53,7 @@
   </q-dialog>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { defineProps, defineEmits, ref, watch } from 'vue';
 
 const props = defineProps({

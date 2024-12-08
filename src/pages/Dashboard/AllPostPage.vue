@@ -60,16 +60,16 @@
     </q-table>
   </div>
   <AdminUpdatePost
-    v-model:modal="updatePostParameter.modal"
-    v-model:data="updatePostParameter"
+  v-model:modal="updatePostParameter.modal"
+  v-model:data="updatePostParameter"
   ></AdminUpdatePost>
   <AdminDeletePost
-    v-model:modal="deletePostParameter.modal"
-    v-model:data="deletePostParameter"
+  v-model:modal="deletePostParameter.modal"
+  v-model:data="deletePostParameter"
   ></AdminDeletePost>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { ref } from 'vue';
 import { columns, rows, pagination } from 'components/ts/AllPostComponent';
 import AdminUpdatePost from 'components/vue/AdminUpdatePost.vue';
@@ -78,33 +78,33 @@ import AdminDeletePost from 'components/vue/AdminDeletePost.vue';
 const filter = ref('');
 
 const updatePostParameter = ref({
-  modal: false,
-  id: 0,
-  title: '',
-  description: '',
+  modal: <boolean> false,
+  id: <number>0,
+  title: <string>'',
+  description: <string>'',
 });
 const deletePostParameter = ref({
-  modal: false,
-  id: 0,
-  image: '',
-  title: '',
-  username: '',
-  description: '',
+  modal: <boolean> false,
+  id: <number>0,
+  image: <string>'',
+  title: <string>'',
+  username: <string>'',
+  description: <string>'',
 });
 
-const updatePost = (row) => {
+const updatePost = (row: any) => {
   updatePostParameter.value.id = row.id;
   updatePostParameter.value.title = row.title;
   updatePostParameter.value.description = row.description;
-  updatePostParameter.value.modal = !updatePostParameter.value.modal;
+  updatePostParameter.value.modal = !updatePostParameter.value.modal
 };
 
-const deletePost = (row) => {
+const deletePost = (row: any) => {
   deletePostParameter.value.id = row.id;
   deletePostParameter.value.image = row.image;
   deletePostParameter.value.title = row.title;
-  deletePostParameter.value.username = row.username;
+  deletePostParameter.value.username = row.username.name;
   deletePostParameter.value.description = row.description;
-  deletePostParameter.value.modal = !deletePostParameter.value.modal;
+  deletePostParameter.value.modal = !deletePostParameter.value.modal
 };
 </script>

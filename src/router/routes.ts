@@ -1,68 +1,79 @@
-import { RouteCallback } from '@quasar/app-vite';
 import { route } from 'quasar/wrappers';
+import { RouteCallback } from '@quasar/app-vite';
 import { RouteRecordRaw, RouteRecordRedirectOption } from 'vue-router';
-
+import { useAuthStore } from 'src/stores/auth-store';
 
 const routes: RouteRecordRaw[] = [
   {
+    beforeEnter(to, from, next) {
+      const auth = useAuthStore();
+      auth.import();
+      if (!auth.isAuthorized) {
+        next();
+      } else {
+        next({ name: 'index' });
+      }
+    },
     path: '/',
-    component: () => import('layouts/auth/authLayout.vue'),
-    redirect: <RouteRecordRedirectOption> route( <RouteCallback>{name: 'loginPage'}),
+    component: () => import('layouts/auth/AuthLayout.vue'),
+    redirect: <RouteRecordRedirectOption> route( <RouteCallback> {name: 'login'} ),
     children: [
       {
-        path: 'LoginPage',
-        name: 'loginPage',
-        component: () => import('/src/pages/auth/LoginPage.vue')
+        path: 'login',
+        name: 'login',
+        component: () => import('pages/auth/LoginPage.vue')
       },
       {
-        path: 'registerPage',
-        name:'registerPage',
+        path: 'register',
+        name: 'register',
         component: () => import('pages/auth/RegisterPage.vue')
-      }
+      },
     ],
   },
-  // {
-  //   path: '/',
-  //   component: () => import('layouts/auth/authLayout.vue'),
-  //   children: [
-  //     {
-  //       path: 'registerPage',
-  //       component: () => import('pages/auth/RegisterPage.vue')
-  //     }
-  //   ],
-  // },
   {
+    beforeEnter(to, from, next) {
+      const auth = useAuthStore();
+      auth.import();
+      if (auth.isAuthorized) {
+        next();
+      } else {
+        next({ name: 'login' });
+      }
+    },
     path: '/dashboard',
-    component: () => import('layouts/Dashboard/DashboardLayout.vue'),
+    component: () => import('layouts/dashboard/DashboardLayout.vue'),
+    redirect: <RouteRecordRedirectOption> route( <RouteCallback> {name: 'index'} ),
     children: [
-      {
-        path: 'search',
-        name: 'search',
-        component: () => import('pages/Dashboard/SearchPage.vue')
-      },
       {
         path: 'index',
         name: 'index',
-        component: () => import('pages/Dashboard/IndexPage.vue')
+        component: () => import('pages/dashboard/IndexPage.vue')
+      },
+      {
+        path: 'search',
+        name: 'search',
+        component: () => import('pages/dashboard/SearchPage.vue')
       },
       {
         path: 'myPost',
         name: 'myPost',
-        component: () => import('pages/Dashboard/MyPostPage.vue')
+        component: () => import('pages/dashboard/MyPostPage.vue')
       },
       {
         path: 'allPost',
         name: 'allPost',
-        component: () => import('pages/Dashboard/AllPostPage.vue')
+        component: () => import('pages/dashboard/AllPostPage.vue')
       },
       {
         path: 'allUser',
         name: 'allUser',
-        component: () => import('pages/Dashboard/AllUserPage.vue')
-      }
+        component: () => import('pages/dashboard/AllUserPage.vue')
+      },
     ],
   },
 
+  // Always leave this as last one,
+  // but you can also remove it
   {
     path: '/:catchAll(.*)*',
     component: () => import('pages/ErrorNotFound.vue'),

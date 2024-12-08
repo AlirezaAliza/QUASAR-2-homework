@@ -1,17 +1,17 @@
 <template>
-  <q-dialog v-model="props.modal" persistent>
+  <q-dialog :model-value="props.modal" persistent>
     <q-card style="min-width: 350px">
       <q-tab-panels v-model="tab" animated class="full-width">
         <q-tab-panel name="image">
           <q-img
             :src="props.data.image"
-            fit="cover"
+            :fit="'cover'"
             width="100%"
             height="300px"
           />
         </q-tab-panel>
 
-        <q-tab-panel name="map">Map Part</q-tab-panel>
+        <q-tab-panel name="map"> Map Part </q-tab-panel>
       </q-tab-panels>
       <q-card-section>
         <q-btn
@@ -20,7 +20,7 @@
           icon="place"
           class="absolute"
           style="top: 0; right: 12px; transform: translateY(-50%)"
-          @click="changeTab"
+          @click="changeTab()"
         />
         <div class="row no-wrap items-center">
           <div class="col text-h6 ellipsis">
@@ -33,7 +33,7 @@
           {{ props.data.username }}
         </div>
         <div class="text-caption text-grey">
-          {{ (props.data.description || '').substring(0, 200) }} ...
+          {{ props.data.description.substring(0, 200) }} ...
         </div>
       </q-card-section>
       <q-separator />
@@ -55,44 +55,29 @@
   </q-dialog>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { defineProps, defineEmits, ref } from 'vue';
 
 const props = defineProps({
   modal: {
-    type: Boolean,
     default: false,
   },
-  data: {
-    type: Object,
-    default: () => ({
-      image: '',
-      title: '',
-      username: '',
-      description: '',
-    }),
-  },
+  data: {},
 });
 
 const tab = ref('image');
-
 const changeTab = () => {
-  tab.value = tab.value === 'image' ? 'map' : 'image';
+  if (tab.value == 'image') tab.value = 'map';
+  else tab.value = 'image';
 };
 
 const emit = defineEmits(['update:modal']);
 
 const close = () => {
-  emit('update:modal', false);
+  emit.call(this, 'update:modal', false);
 };
 
 const accepted = () => {
-  emit('update:modal', false);
+  emit.call(this, 'update:modal', false);
 };
 </script>
-
-<style scoped>
-.absolute {
-  position: absolute;
-}
-</style>

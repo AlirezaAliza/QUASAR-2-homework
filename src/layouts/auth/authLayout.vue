@@ -1,7 +1,5 @@
 <template>
-  <q-layout>
-    <q-page-container>
-      <router-view />
-    </q-page-container>
+  <q-layout class="auth-background">
+    <router-view/>
   </q-layout>
 </template>
