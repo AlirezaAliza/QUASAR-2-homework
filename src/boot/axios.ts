@@ -14,7 +14,7 @@ declare module '@vue/runtime-core' {
 // If any client changes this (global) instance, it might be a
 // good idea to move this instance creation inside of the
 // "export default () => {}" function below (which runs individually
-// for each client)
+// for each client) 
 const api = axios.create({ baseURL: 'https://openapi.poulstar.org/' });
 
 export default boot(({ app }) => {
