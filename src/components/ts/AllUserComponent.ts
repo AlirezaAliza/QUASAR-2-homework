@@ -1,6 +1,6 @@
 import { ref } from 'vue';
 
-const columns: any[] = [
+const columns = [
   { name: 'id', align: 'left', label: 'ID', field: 'id', sortable: true },
   { name: 'name', align: 'center', label: 'User Name', field: 'name', sortable: true },
   { name: 'email', align: 'center', label: 'E-Mail', field: 'email', sortable: true },
@@ -9,14 +9,14 @@ const columns: any[] = [
 const rows = ref([
   {
     id: 1,
-    name: 'hossein',
-    email: 'hossein@gmail.com',
+    name: 'alireza',
+    email: 'alireza@gmail.com',
     role: [{name:'admin'}]
   },
   {
     id: 2,
-    name: 'hossein',
-    email: 'hossein@gmail.com',
+    name: 'alireza',
+    email: 'alireza@gmail.com',
     role: [{name:'user'}]
   },,
 

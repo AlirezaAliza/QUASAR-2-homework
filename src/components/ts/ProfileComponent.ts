@@ -35,8 +35,8 @@ const profile = ref({
 const profileTemp = ref({
   modal: false,
   id: 0,
-  username: 'hossein pourghadiri',
-  email: 'hossein@gmail.com',
+  username: 'alireza alireza',
+  email: 'alireza@gmail.com',
   avatar: '../../../public/images/avatar.png',
   newAvatar: undefined,
   password: '',

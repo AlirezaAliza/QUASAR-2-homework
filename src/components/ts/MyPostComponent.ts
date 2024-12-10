@@ -1,6 +1,6 @@
 import { ref } from 'vue';
 
-const columns: any[] = [
+const columns = [
   { name: 'id', align: 'left', label: 'ID', field: 'id', sortable: true },
   { name: 'title', align: 'center', label: 'Title', field: 'title', sortable: true },
   { name: 'description', align: 'center', label: 'Description', field: 'description', sortable: true,format: (val:string) => `${val.slice(0,40)} ...`, },
