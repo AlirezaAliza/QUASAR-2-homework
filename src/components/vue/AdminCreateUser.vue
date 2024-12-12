@@ -69,7 +69,7 @@
   </q-dialog>
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import { defineProps, defineEmits, ref } from 'vue';
 
 const props = defineProps({

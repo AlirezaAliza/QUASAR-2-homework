@@ -6,7 +6,7 @@
 
         <q-toolbar-title>
           <q-avatar>
-            <img src="../../../public/images/logo.png" />
+            <img  src="../../../public/images/Alireza (1).gif" />
           </q-avatar>
           Menu
         </q-toolbar-title>

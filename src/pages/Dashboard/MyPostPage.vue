@@ -78,7 +78,7 @@
   ></UserDeletePost>
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import { ref } from 'vue';
 import { columns, rows, pagination } from 'components/ts/MyPostComponent';
 import UserCreatePost from 'components/vue/UserCreatePost.vue';
@@ -88,35 +88,35 @@ import UserDeletePost from 'components/vue/UserDeletePost.vue';
 const filter = ref('');
 
 const createPostParameter = ref({
-  modal: <boolean> false,
+  modal:  false,
 });
 const updatePostParameter = ref({
-  modal: <boolean> false,
-  id: <number>0,
-  title: <string>'',
-  description: <string>'',
+  modal:  false,
+  id:0,
+  title: '',
+  description: '',
 });
 const deletePostParameter = ref({
-  modal: <boolean> false,
-  id: <number>0,
-  image: <string>'',
-  title: <string>'',
-  username: <string>'',
-  description: <string>'',
+  modal:  false,
+  id: 0,
+  image: '',
+  title: '',
+  username: '',
+  description: '',
 });
 
 const createPost = () => {
   createPostParameter.value.modal = !createPostParameter.value.modal
 };
 
-const updatePost = (row: any) => {
+const updatePost = (row) => {
   updatePostParameter.value.id = row.id;
   updatePostParameter.value.title = row.title;
   updatePostParameter.value.description = row.description;
   updatePostParameter.value.modal = !updatePostParameter.value.modal
 };
 
-const deletePost = (row: any) => {
+const deletePost = (row) => {
   deletePostParameter.value.id = row.id;
   deletePostParameter.value.image = row.image;
   deletePostParameter.value.title = row.title;

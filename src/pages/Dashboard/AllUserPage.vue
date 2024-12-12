@@ -76,7 +76,7 @@
   ></AdminDeleteUser>
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import { ref } from 'vue';
 import { columns, rows, pagination } from 'components/ts/AllUserComponent';
 import AdminCreateUser from 'components/vue/AdminCreateUser.vue';
@@ -86,26 +86,26 @@ import AdminDeleteUser from 'components/vue/AdminDeleteUser.vue';
 const filter = ref('');
 
 const createUserParameter = ref({
-  modal: <boolean>false,
+  modal: false,
 });
 const updateUserParameter = ref({
-  modal: <boolean>false,
-  id: <number>0,
-  name: <string>'',
-  email: <string>'',
-  role: <string>'',
+  modal: false,
+  id: 0,
+  name: '',
+  email: '',
+  role: '',
 });
 const deleteUserParameter = ref({
-  modal: <boolean>false,
-  id: <number>0,
-  name: <string>'',
+  modal: false,
+  id: 0,
+  name: '',
 });
 
 const createUser = () => {
   createUserParameter.value.modal = !createUserParameter.value.modal;
 };
 
-const updateUser = (row: any) => {
+const updateUser = (row) => {
   updateUserParameter.value.id = row.id;
   updateUserParameter.value.name = row.name;
   updateUserParameter.value.email = row.email;
@@ -113,7 +113,7 @@ const updateUser = (row: any) => {
   updateUserParameter.value.modal = !updateUserParameter.value.modal;
 };
 
-const deleteUser = (row: any) => {
+const deleteUser = (row) => {
   deleteUserParameter.value.id = row.id;
   deleteUserParameter.value.name = row.name;
   deleteUserParameter.value.modal = !deleteUserParameter.value.modal;

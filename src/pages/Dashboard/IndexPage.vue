@@ -42,10 +42,10 @@
   </q-layout>
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import { posts } from 'components/ts/IndexComponent';
 
-const like = (id: number) => {
+const like = (id) => {
   console.log(id);
 };
 </script>
