@@ -92,9 +92,11 @@ const login = () => {
         router.replace({ name: 'index' });
       },
       (error) => {
-        console.log(
-          `No Internet, Connection Lost because server not serve!!!\n${error}`
+        alert(
+          `this name is not login please first register and then login`
         );
+        console.log(error);
+
       }
     );
 };

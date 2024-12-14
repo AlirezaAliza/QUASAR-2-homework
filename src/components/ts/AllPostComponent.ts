@@ -2,9 +2,9 @@ import { ref } from 'vue';
 
 const columns = [
   { name: 'id', align: 'left', label: 'ID', field: 'id', sortable: true },
-  { name: 'username', align: 'center', label: 'User Name', field: 'username', sortable: true,format: (val:any) => `${val.name}` },
+  { name: 'username', align: 'center', label: 'User Name', field: 'username', sortable: true,format: (val) => `${val.name}` },
   { name: 'title', align: 'center', label: 'Title', field: 'title', sortable: true },
-  { name: 'description', align: 'center', label: 'Description', field: 'description', sortable: true,format: (val:string) => `${val.slice(0,40)} ...` },
+  { name: 'description', align: 'center', label: 'Description', field: 'description', sortable: true,format: (val) => `${val.slice(0,40)} ...` },
 ]
 
 const rows = ref([
