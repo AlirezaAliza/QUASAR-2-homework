@@ -357,31 +357,25 @@ export default {
 }
 @keyframes Dark {
   0% {
-    background-color: #f8f9fa;
-  }
-  12% {
-    background-color: #e9ecef;
-  }
-  24% {
-    background-color: #dee2e6;
+    background-color: #daee94;
   }
   36% {
-    background-color: #ced4da;
+    background-color: #ceeb7d;
   }
   48% {
-    background-color: #adb5bd;
+    background-color: #b9e958;
   }
   60% {
-    background-color: #6c757d;
+    background-color: #8cd700;
   }
   72% {
-    background-color: #495057;
+    background-color: #7dbb00;
   }
   84% {
-    background-color: #343a40;
+    background-color: #709400;
   }
   100% {
-    background-color: #212529;
+    background-color: #709400;
   }
 }
 </style>
