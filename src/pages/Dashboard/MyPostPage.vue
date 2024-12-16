@@ -65,16 +65,14 @@
       </template>
     </q-table>
   </div>
-  <UserCreatePost
-  v-model:modal="createPostParameter.modal"
-  ></UserCreatePost>
+  <UserCreatePost v-model:modal="createPostParameter.modal"></UserCreatePost>
   <UserUpdatePost
-  v-model:modal="updatePostParameter.modal"
-  v-model:data="updatePostParameter"
+    v-model:modal="updatePostParameter.modal"
+    v-model:data="updatePostParameter"
   ></UserUpdatePost>
   <UserDeletePost
-  v-model:modal="deletePostParameter.modal"
-  v-model:data="deletePostParameter"
+    v-model:modal="deletePostParameter.modal"
+    v-model:data="deletePostParameter"
   ></UserDeletePost>
 </template>
 
@@ -88,16 +86,16 @@ import UserDeletePost from 'components/vue/UserDeletePost.vue';
 const filter = ref('');
 
 const createPostParameter = ref({
-  modal:  false,
+  modal: false,
 });
 const updatePostParameter = ref({
-  modal:  false,
-  id:0,
+  modal: false,
+  id: 0,
   title: '',
   description: '',
 });
 const deletePostParameter = ref({
-  modal:  false,
+  modal: false,
   id: 0,
   image: '',
   title: '',
@@ -106,14 +104,14 @@ const deletePostParameter = ref({
 });
 
 const createPost = () => {
-  createPostParameter.value.modal = !createPostParameter.value.modal
+  createPostParameter.value.modal = !createPostParameter.value.modal;
 };
 
 const updatePost = (row) => {
   updatePostParameter.value.id = row.id;
   updatePostParameter.value.title = row.title;
   updatePostParameter.value.description = row.description;
-  updatePostParameter.value.modal = !updatePostParameter.value.modal
+  updatePostParameter.value.modal = !updatePostParameter.value.modal;
 };
 
 const deletePost = (row) => {
@@ -122,6 +120,6 @@ const deletePost = (row) => {
   deletePostParameter.value.title = row.title;
   deletePostParameter.value.username = 'hossein';
   deletePostParameter.value.description = row.description;
-  deletePostParameter.value.modal = !deletePostParameter.value.modal
+  deletePostParameter.value.modal = !deletePostParameter.value.modal;
 };
 </script>

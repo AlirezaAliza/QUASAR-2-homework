@@ -59,7 +59,7 @@ import { defineProps, defineEmits, ref } from 'vue';
 const props = defineProps({
   modal: {
     default: false,
-  }
+  },
 });
 
 const createPostParameter = ref({

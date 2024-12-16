@@ -60,12 +60,12 @@
     </q-table>
   </div>
   <AdminUpdatePost
-  v-model:modal="updatePostParameter.modal"
-  v-model:data="updatePostParameter"
+    v-model:modal="updatePostParameter.modal"
+    v-model:data="updatePostParameter"
   ></AdminUpdatePost>
   <AdminDeletePost
-  v-model:modal="deletePostParameter.modal"
-  v-model:data="deletePostParameter"
+    v-model:modal="deletePostParameter.modal"
+    v-model:data="deletePostParameter"
   ></AdminDeletePost>
 </template>
 
@@ -78,13 +78,13 @@ import AdminDeletePost from 'components/vue/AdminDeletePost.vue';
 const filter = ref('');
 
 const updatePostParameter = ref({
-  modal:  false,
+  modal: false,
   id: 0,
   title: '',
   description: '',
 });
 const deletePostParameter = ref({
-  modal:  false,
+  modal: false,
   id: 0,
   image: '',
   title: '',
@@ -96,7 +96,7 @@ const updatePost = (row) => {
   updatePostParameter.value.id = row.id;
   updatePostParameter.value.title = row.title;
   updatePostParameter.value.description = row.description;
-  updatePostParameter.value.modal = !updatePostParameter.value.modal
+  updatePostParameter.value.modal = !updatePostParameter.value.modal;
 };
 
 const deletePost = (row) => {
@@ -105,6 +105,6 @@ const deletePost = (row) => {
   deletePostParameter.value.title = row.title;
   deletePostParameter.value.username = row.username.name;
   deletePostParameter.value.description = row.description;
-  deletePostParameter.value.modal = !deletePostParameter.value.modal
+  deletePostParameter.value.modal = !deletePostParameter.value.modal;
 };
 </script>

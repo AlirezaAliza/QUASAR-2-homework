@@ -60,7 +60,7 @@ const props = defineProps({
   modal: {
     default: false,
   },
-  data: {}
+  data: {},
 });
 
 const updatePostParameter = ref({

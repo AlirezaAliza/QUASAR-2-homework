@@ -6,7 +6,7 @@
 
         <q-toolbar-title>
           <q-avatar>
-            <img  src="../../../public/images/Alireza (1).gif" />
+            <img src="../../../public/images/Alireza (1).gif" />
           </q-avatar>
           Menu
         </q-toolbar-title>
@@ -206,14 +206,14 @@ export default {
     const darkMode = ref(false);
 
     const navBarSelect = ref('');
-    const navBarOptions = ['Default', 'RGB', 'Primary', 'Dark'];
+    const navBarOptions = ['Default', 'RGB', 'Primary', 'green'];
     const navBarClass = ref('');
     watch(navBarSelect, () => {
       if (navBarSelect.value === 'RGB') {
         navBarClass.value = 'RGB';
       } else if (navBarSelect.value === 'Primary') {
         navBarClass.value = 'Primary';
-      } else if (navBarSelect.value === 'Dark') {
+      } else if (navBarSelect.value === 'green') {
         navBarClass.value = 'Dark';
       } else {
         navBarClass.value = 'Default';

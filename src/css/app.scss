@@ -2,7 +2,7 @@
   position: relative;
   width: 500px;
   height: auto;
-  background-color:  rgba(0 0 0 / 0.19);
+  background-color: rgba(0 0 0 / 0.19);
   border-radius: 14px;
   left: 33%;
   top: 100px;
@@ -12,13 +12,16 @@
   display: flex;
   justify-content: space-between;
 }
-.avatars button{
+.avatars button {
   border-radius: 50%;
   border: none;
   width: auto;
   height: auto;
 }
-#Avatar1, #Avatar2, #Avatar3, #Avatar4{
+#Avatar1,
+#Avatar2,
+#Avatar3,
+#Avatar4 {
   width: 70px;
   height: auto;
 }
@@ -36,7 +39,6 @@
 .text_login button {
   background-color: rgba(8 8 8 / 0.05);
   border: none;
-
 }
 .inputs {
   color: white;
@@ -75,7 +77,6 @@
 .my-card {
   max-width: 300px;
   width: 100%;
-
 }
 .main {
   background-image: url(../././../public/images/nody-دانلود-تصویر-زمینه-برای-کامپیوتر-با-کیفیت-full-hd-1628751030.jpg);
@@ -98,13 +99,13 @@
 
 .avatarBox {
   background-image: radial-gradient(
-    rgb(245,246,240),
-    rgb(2,136,209),
-    rgb(5,77,139),
+    rgb(245, 246, 240),
+    rgb(2, 136, 209),
+    rgb(5, 77, 139)
   );
   width: 100%;
   height: 300px;
-  box-shadow: 0 3px 9px rgba(0,0,0,0.9);
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.9);
 }
 
 .logo {

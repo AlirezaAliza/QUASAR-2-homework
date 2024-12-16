@@ -2,27 +2,48 @@ import { ref } from 'vue';
 
 const columns = [
   { name: 'id', align: 'left', label: 'ID', field: 'id', sortable: true },
-  { name: 'username', align: 'center', label: 'User Name', field: 'username', sortable: true,format: (val) => `${val.name}` },
-  { name: 'title', align: 'center', label: 'Title', field: 'title', sortable: true },
-  { name: 'description', align: 'center', label: 'Description', field: 'description', sortable: true,format: (val) => `${val.slice(0,40)} ...` },
-]
+  {
+    name: 'username',
+    align: 'center',
+    label: 'User Name',
+    field: 'username',
+    sortable: true,
+    format: (val) => `${val.name}`,
+  },
+  {
+    name: 'title',
+    align: 'center',
+    label: 'Title',
+    field: 'title',
+    sortable: true,
+  },
+  {
+    name: 'description',
+    align: 'center',
+    label: 'Description',
+    field: 'description',
+    sortable: true,
+    format: (val) => `${val.slice(0, 40)} ...`,
+  },
+];
 
 const rows = ref([
   {
     id: 1,
     image: 'images/mountains.jpg',
     title: 'fake',
-    description: 'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available',
-    username: {name:'alireza'}
+    description:
+      'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available',
+    username: { name: 'alireza' },
   },
   {
     id: 2,
     image: 'images/mountain.jpg',
     title: 'fake',
-    description: 'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available',
-    username: {name:'alireza'}
+    description:
+      'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available',
+    username: { name: 'alireza' },
   },
-
 ]);
 
 const pagination = ref({
@@ -30,7 +51,7 @@ const pagination = ref({
   descending: false,
   page: 1,
   rowsPerPage: 5,
-  rowsNumber: 100
-})
+  rowsNumber: 100,
+});
 
-export {columns, rows, pagination}
+export { columns, rows, pagination };

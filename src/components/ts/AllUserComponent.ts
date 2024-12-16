@@ -2,24 +2,37 @@ import { ref } from 'vue';
 
 const columns = [
   { name: 'id', align: 'left', label: 'ID', field: 'id', sortable: true },
-  { name: 'name', align: 'center', label: 'User Name', field: 'name', sortable: true },
-  { name: 'email', align: 'center', label: 'E-Mail', field: 'email', sortable: true },
-]
+  {
+    name: 'name',
+    align: 'center',
+    label: 'User Name',
+    field: 'name',
+    sortable: true,
+  },
+  {
+    name: 'email',
+    align: 'center',
+    label: 'E-Mail',
+    field: 'email',
+    sortable: true,
+  },
+];
 
 const rows = ref([
   {
     id: 1,
     name: 'alireza',
     email: 'alireza@gmail.com',
-    role: [{name:'admin'}]
+    role: [{ name: 'admin' }],
   },
   {
     id: 2,
     name: 'alireza',
     email: 'alireza@gmail.com',
-    role: [{name:'user'}]
-  },,
+    role: [{ name: 'user' }],
+  },
 
+  ,
 ]);
 
 const pagination = ref({
@@ -27,7 +40,7 @@ const pagination = ref({
   descending: false,
   page: 1,
   rowsPerPage: 5,
-  rowsNumber: 100
-})
+  rowsNumber: 100,
+});
 
-export {columns, rows, pagination}
+export { columns, rows, pagination };

@@ -1,5 +1,5 @@
 <template>
   <q-layout class="auth-background">
-    <router-view/>
+    <router-view />
   </q-layout>
 </template>

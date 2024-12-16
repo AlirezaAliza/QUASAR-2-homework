@@ -1,6 +1,12 @@
-import{ mdiSearchWeb ,mdiHome, mdiNote, mdiNoteMultiple, mdiAccountGroup} from '@quasar/extras/mdi-v7';
+import {
+  mdiSearchWeb,
+  mdiHome,
+  mdiNote,
+  mdiNoteMultiple,
+  mdiAccountGroup,
+} from '@quasar/extras/mdi-v7';
 
-type menuItem = {name: string, route: string, icon: string};
+type menuItem = { name: string; route: string; icon: string };
 
 function menu() {
   return [

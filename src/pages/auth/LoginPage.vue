@@ -27,7 +27,6 @@
                   label="Password"
                   class="inputs"
                 />
-
               </q-form>
             </q-card-section>
             <q-card-actions class="q-px-md">
@@ -59,8 +58,7 @@
 </template>
 
 <style>
-
-.div{
+.div {
   position: relative;
   left: 60px;
 }
@@ -68,7 +66,6 @@
 #border {
   border-radius: 100px;
 }
-
 </style>
 
 <script lang="ts" setup>
@@ -92,11 +89,8 @@ const login = () => {
         router.replace({ name: 'index' });
       },
       (error) => {
-        alert(
-          `this name is not login please first register and then login`
-        );
+        alert(`this name is not login please first register and then login`);
         console.log(error);
-
       }
     );
 };

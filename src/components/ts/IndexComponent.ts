@@ -6,7 +6,8 @@ const posts = ref([
     image: 'images/mountains.jpg',
     title: 'Fake Post',
     username: 'alireza',
-    description: 'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available',
+    description:
+      'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available',
     upVoteCount: 10,
   },
   {
@@ -14,7 +15,8 @@ const posts = ref([
     image: 'images/mountains.jpg',
     title: 'Fake Post',
     username: 'alireza',
-    description: 'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available',
+    description:
+      'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available',
     upVoteCount: 10,
   },
   {
@@ -22,7 +24,8 @@ const posts = ref([
     image: 'images/mountains.jpg',
     title: 'Fake Post',
     username: 'alireza',
-    description: 'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available',
+    description:
+      'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available',
     upVoteCount: 10,
   },
   {
@@ -30,11 +33,10 @@ const posts = ref([
     image: 'images/mountains.jpg',
     title: 'Fake Post',
     username: 'alireza',
-    description: 'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available',
+    description:
+      'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available',
     upVoteCount: 10,
   },
 ]);
 
-export {posts}
-
-
+export { posts };
