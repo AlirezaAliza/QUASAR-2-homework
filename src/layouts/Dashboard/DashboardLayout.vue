@@ -375,7 +375,7 @@ export default {
     background-color: #709400;
   }
   100% {
-    background-color: quasar d#709400;
+    background-color: #709400;
   }
 }
 </style>
